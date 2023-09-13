@@ -4,13 +4,14 @@ const car = {
     modelo: "Fiesta",
     ano: 2000,
     km: 1500,
-    velocidade: 10,
+    velocidade: 500,
     combustivel: "Gasolina",
     escolheCor: function (cor) {
         return cor;
     },
-    aceleracao: function (velocidade){
-        return velocidade;
+    aceleracao: function (aceeracao){
+        car.velocidade++;
+        return car.velocidade;
     }
 };
 //Acessando atributos dos objetos
@@ -30,6 +31,5 @@ O carro usa combustivel tipo ${car.combustivel}`)
 let escolheCor = car.escolheCor("Rosa")
 console.log("a cor escolhida é", escolheCor)
 
-for (i=0; i<=car.velocidade; i++){
-    console.log(`A velocidade atual do carro é ${i}`)
-}
+
+    console.log(`A velocidade atual do carro é ${car.aceleracao()}`)
